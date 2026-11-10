@@ -42,4 +42,7 @@ dependencies {
     implementation(libs.shizuku.provider)
     implementation(libs.shizuku.api)
     implementation(libs.hiddenapibypass)
+    
+    // 增加这行：提供 Android 隐藏 API (如 ITelephony) 的编译期依赖
+    compileOnly("dev.rikka.hidden:stub:43.0.5") 
 }
