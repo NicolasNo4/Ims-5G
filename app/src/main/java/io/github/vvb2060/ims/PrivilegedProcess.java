@@ -108,6 +108,11 @@ public class PrivilegedProcess extends Instrumentation {
 
     private static PersistableBundle getConfig() {
         var bundle = new PersistableBundle();
+        bundle.putIntArray("carrier_nr_availabilities_int_array", new int[]{1, 2});
+        bundle.putBoolean("vonr_enabled_bool", true);
+        bundle.putBoolean("vonr_setting_visibility_bool", true);
+        bundle.putIntArray("5g_nr_ssrsrp_thresholds_int_array", new int[]{-110, -90, -80, -65});
+        
         bundle.putBoolean(CarrierConfigManager.KEY_SHOW_IMS_REGISTRATION_STATUS_BOOL, true);
         //bundle.putString(CarrierConfigManager.KEY_SIM_COUNTRY_ISO_OVERRIDE_STRING, "jp");
 
